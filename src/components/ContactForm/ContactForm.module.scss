@@ -1,0 +1,73 @@
+@import "../../styles/variables/colors";
+@import "../../styles/mixins/textStyle.mixin";
+
+.wrapper {
+  max-width: 410px;
+  margin: 0 2rem;
+}
+
+.title {
+  @include textStyle($grey);
+  margin-bottom: 4rem;
+  line-height: 2.4rem;
+}
+
+.email-field-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.text-input {
+  width: 100%;
+
+  > * {
+    margin-bottom: 4rem;
+  }
+}
+
+.submit-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.did-you-mean {
+  position: absolute;
+  bottom: -30px;
+  color: #e1aa00;
+  padding: 0.5rem;
+  font-family: "Univers LT Std";
+  font-size: 1.2rem;
+  text-decoration: underline;
+  background-color: #ffeb0030;
+  cursor: pointer;
+}
+
+.text-input {
+  width: 100%;
+
+  > * {
+    margin-bottom: 4rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .text-input {
+    > * {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .title {
+    margin-bottom: 2rem;
+  }
+
+  .submit-button {
+    margin-top: 4rem;
+  }
+
+  .wrapper {
+    margin: 0;
+  }
+}

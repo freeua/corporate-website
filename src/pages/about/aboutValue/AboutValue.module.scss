@@ -1,0 +1,236 @@
+@import "../../../styles/variables/colors";
+@import "../../../styles/mixins/textStyle.mixin";
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+strong {
+  color: #2b2b2b;
+}
+
+.read-more {
+  display: none;
+  @include textStyle($grey, 1.8rem, 500, normal, normal);
+  transition: 0.4s ease;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+h2 {
+  @include textStyle(#fff, 3.2rem, 700, normal, normal);
+  margin-bottom: 30px;
+}
+
+.info {
+  padding: 45px 85px;
+}
+
+.text {
+  opacity: 0.65;
+  line-height: 26px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  .info {
+    background: $blue;
+    flex: 1 1;
+  }
+
+  .text {
+    @include textStyle(#fff, 1.8rem, 100, normal, normal);
+  }
+
+  .image {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.right {
+  background: $darkgray_background;
+  width: 50%;
+
+  h2 {
+    color: $grey;
+  }
+
+  .text {
+    @include textStyle($grey, 1.8rem, 100, normal, normal);
+    margin-bottom: 40px;
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.download {
+  h2 {
+    text-align: center;
+    @include textStyle($blue, 3.2rem, 700, normal, normal);
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.files {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+
+.one-file {
+  width: 40%;
+  padding-right: 3rem;
+}
+
+.column {
+  &:nth-child(1) {
+    margin-right: 30px;
+  }
+}
+
+.one-file {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  cursor: pointer;
+  span {
+    padding-left: 30px;
+    @include textStyle($grey_text, 1.8rem, 300, normal, normal);
+    flex: 1 1;
+  }
+  svg {
+    width: 40px;
+  }
+}
+
+.note {
+  @include textStyle($grey_text, 1.8rem, 300, normal, normal);
+  line-height: 24px;
+  margin-bottom: 40px;
+  span {
+    &:nth-child(1) {
+      opacity: 1;
+    }
+    &:nth-child(2) {
+      opacity: 0.65;
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .info {
+    padding: 35px 45px;
+  }
+
+  .row > div {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .right {
+    width: 100%;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .row {
+    justify-content: flex-start;
+    div {
+      margin-right: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+    > div {
+      width: 100%;
+    }
+  }
+
+  .files {
+    flex-direction: column;
+  }
+
+  .column {
+    &:nth-child(1) {
+      margin-right: 0;
+    }
+  }
+
+  .one-file {
+    margin-bottom: 25px;
+    width: 100%;
+
+    span {
+      padding-left: 20px;
+      // letter-spacing: 0.5px;
+    }
+    svg {
+      width: 30px;
+    }
+  }
+
+  .left {
+    .info {
+      padding: 3.5rem 2.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .read-more {
+    display: block;
+  }
+
+  .info {
+    padding: 6% 7%;
+  }
+
+  .note {
+    margin: 40px 0;
+  }
+
+  .download {
+    h2 {
+      text-align: initial;
+      margin: 20px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .info {
+    padding: 7% 10%;
+  }
+
+  .note {
+    line-height: 27px;
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../styles/variables/colors";
+@import "../../styles/mixins/textStyle.mixin";
+
+.info-title {
+  margin-bottom: 8px;
+}
+
+.info-text-wrapper {
+  line-height: 25px;
+  > * {
+    opacity: 0.55;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 25rem;
+  @include textStyle();
+  line-height: 1.36;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 700px) {
+  .info-text-wrapper {
+    line-height: 3rem;
+    opacity: 0.55;
+    font-weight: 200;
+  }
+}

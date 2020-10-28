@@ -1,0 +1,64 @@
+@import "../../../styles/mixins/textStyle.mixin";
+
+.button {
+  @include textStyle(white, 1.6rem);
+  letter-spacing: 1.1px;
+  background-color: $blue;
+  padding: 2rem 3rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+  border: 1px solid $blue;
+
+  &:hover:enabled {
+    background-color: transparent;
+    color: $blue;
+    border: 1px solid $blue;
+  }
+
+  &a:hover {
+    background-color: transparent;
+    color: $blue;
+    border: 1px solid $blue;
+  }
+
+  &:disabled {
+    background-color: lightgrey;
+  }
+
+  &.white {
+    background-color: #fff;
+    color: $blue;
+    border: 1px solid transparent;
+    &:hover:enabled {
+      border: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+    }
+  }
+
+  &.addStyle {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .button {
+    padding: 1.5rem 3rem;
+
+    &.addStyle {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .button {
+    &.addStyle {
+      padding-left: 7rem;
+      padding-right: 7rem;
+    }
+  }
+}

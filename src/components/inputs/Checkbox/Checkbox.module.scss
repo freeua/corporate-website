@@ -1,0 +1,102 @@
+@import "../../../styles/variables/colors";
+@import "../../../styles/mixins/textStyle.mixin";
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  &.white {
+    color: red;
+    & + label::before {
+      border: 2px solid #fff;
+    }
+    & + label::after {
+      border: solid #fff;
+      border-width: 0px 2px 2px 0;
+    }
+  }
+}
+.label {
+  @include textStyle($blue, 1.6rem, 400, normal, normal);
+  position: relative;
+  display: inline-block;
+  height: 1.5em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+.label::before,
+.label::after {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  font-size: 10px !important;
+}
+.label::before {
+  content: " ";
+  border: 2px solid $blue;
+  border-radius: 20%;
+}
+.checkbox + label::after {
+  content: "";
+  left: 7px;
+  top: calc((100% - 12px) / 2);
+  width: 3px;
+  height: 9px;
+  border: solid #002c90;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  display: block;
+  opacity: 0;
+}
+/* :checked */
+.checkbox:checked + label::after {
+  opacity: 1;
+}
+/* Transition */
+.label::before,
+.label::after {
+  -webkit-transition: 0.1s opacity ease;
+  -o-transition: 0.1s opacity ease;
+  transition: 0.1s opacity ease;
+}
+
+.white {
+  & + .label:before {
+    border: 1px solid #fff !important;
+    background: transparent;
+  }
+
+  + .label {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 300;
+  }
+
+  &:checked + .label:before {
+    border-color: #fff !important;
+    color: #fff !important;
+  }
+
+  &:checked + .label:after {
+    left: 6px;
+    top: calc((100% - 13px) / 2);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .white {
+    & + .label {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      &:before {
+        font-size: 2rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}

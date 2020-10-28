@@ -1,0 +1,273 @@
+@import "../../styles/mixins/textStyle.mixin";
+@import "../../styles/variables/colors";
+@import "../../styles/mixins/objectFit.mixin.scss";
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 11% 13%;
+  line-height: 2.8rem;
+}
+
+.section-image-fluid {
+  @include object-fit(cover);
+  object-fit: cover;
+}
+
+// grow Section
+.growSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.growSectionImage {
+  flex-grow: 1;
+}
+
+// end
+
+.section-content-image {
+  @include object-fit(cover);
+  width: 100%;
+  max-height: 100rem;
+  object-fit: cover;
+  object-position: center;
+  display: flex;
+  flex: 1;
+}
+
+.section-title {
+  @include textStyle($grey, 3rem, 700, normal, normal);
+  margin-bottom: 3.5rem;
+  margin-top: 0;
+}
+
+.section-description {
+  padding-top: 2rem;
+  @include textStyle($lightgray_text, 1.6rem, normal, normal, normal);
+
+  img {
+    width: 100%;
+  }
+}
+
+.section-description {
+  &.strongWhite strong {
+    color: #fff;
+  }
+}
+
+.section-image {
+  @include object-fit(cover);
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: flex;
+}
+
+.mobile-section {
+  flex-basis: 100%;
+  width: 100%;
+  line-height: 2.8rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid $blue;
+  cursor: pointer;
+}
+
+.mobile-image {
+  flex-basis: 100%;
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $blue;
+  flex-direction: column;
+  cursor: pointer;
+
+  &:first-child {
+    border-top: 1px solid $blue;
+  }
+}
+
+.expanded {
+  font-size: 1.8rem;
+  color: $blue;
+  margin-left: auto;
+  font-family: "Univers LT Std";
+  font-weight: 400;
+}
+
+.one-file {
+  padding-right: 3rem;
+}
+
+.one-file {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  cursor: pointer;
+  span {
+    padding-left: 30px;
+    @include textStyle($grey_text, 1.8rem, 300, normal, normal);
+    flex: 1 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  svg {
+    width: 40px;
+  }
+}
+
+.sectionsRightList {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  letter-spacing: 1.2px;
+  margin-top: 63px;
+
+  p {
+    color: #002c90;
+    font-size: 1.8rem;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  & > i {
+    border-color: #002c90 !important;
+  }
+
+  &.pdfWhiteArrow {
+    p {
+      color: #fff;
+    }
+
+    i {
+      border-color: #fff !important;
+    }
+  }
+}
+
+.pdfWhite {
+  span {
+    color: white;
+  }
+
+  path {
+    fill: white;
+  }
+}
+
+.sectionChild {
+  > * {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .section {
+    flex-basis: 100% !important;
+    width: 100% !important;
+    // padding: 6% 7%;
+    line-height: 2.8rem;
+  }
+
+  .products {
+    margin-top: 4rem !important;
+  }
+
+  .section-image {
+    @include object-fit(cover);
+    flex-basis: 100%;
+    max-height: 50rem;
+    width: 100% !important;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10rem;
+}
+
+.productWrapper {
+  width: 33.33%;
+  padding: 1.5rem;
+
+  > div {
+    height: 100%;
+  }
+}
+
+.productDescription {
+  @include textStyle($grey, 2rem, 400);
+}
+
+.viewAll {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 10rem 0;
+
+  > a {
+    color: white;
+  }
+}
+
+.mobileProduct {
+  width: 100%;
+  margin: 0 2rem;
+  border-bottom: 1px solid $blue;
+}
+
+.products {
+  .mobileProduct:first-child {
+    border-top: 1px solid $blue;
+  }
+}
+
+.mobileProductDescription {
+  @include textStyle($grey, 1.6rem, 300);
+}
+
+@media screen and (max-width: 678px) {
+  .section {
+    padding: 0;
+  }
+
+  .content {
+    padding: 6% 7%;
+  }
+
+  .section-title {
+    margin: 30px 0 35px;
+  }
+
+  .section-description {
+    padding-top: initial;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .content {
+    padding: 12% 10% 13% 10%;
+  }
+
+  .section-title {
+    margin: 0;
+    padding: 2% 0 12% 0;
+    line-height: 3.5rem;
+  }
+}

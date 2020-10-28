@@ -1,0 +1,122 @@
+@import "../../styles/variables/colors";
+@import "../../styles/mixins/textStyle.mixin";
+@import "../../styles/mixins/objectFit.mixin.scss";
+
+.container {
+  padding: 0 1.5rem;
+}
+
+.wrapper {
+  width: 350px;
+  box-shadow: 18px 18px 15px -8px #ededed;
+  transition: all 500ms ease;
+  cursor: pointer;
+}
+
+.textBlock {
+  padding: 3rem 2.5rem;
+}
+
+.name {
+  @include textStyle($grey, 1.8rem, 300, normal, normal);
+  // white-space: nowrap;
+  overflow: hidden;
+  // text-overflow: ellipsis;
+  line-height: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.position {
+  @include textStyle($grey, 1.5rem, 300, normal, normal);
+  opacity: 0.5;
+  margin-bottom: 3.5rem;
+}
+
+.description {
+  @include textStyle($lightgray_text, 1.6rem, 300, normal, normal);
+  line-height: 1.4;
+  overflow: hidden;
+  box-shadow: white 0px -35px 30px -10px inset;
+}
+
+.active {
+  &-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+    width: 450px;
+  }
+  &-img-wrapper {
+    width: 100%;
+    height: 450px !important;
+    position: relative;
+    display: block;
+
+    &.img-wrapper::after {
+      content: none;
+    }
+
+    img {
+      @include object-fit(cover, top);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-name {
+    color: $blue;
+  }
+}
+
+.info {
+  background: #fff;
+  padding: 10%;
+}
+
+.img-wrapper {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  transition: all 300ms ease;
+
+  img {
+    @include object-fit(cover, top);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .active {
+    &-img-wrapper {
+      height: 320px !important;
+    }
+  }
+
+  .wrapper {
+    width: 260px;
+  }
+
+  .active-wrapper {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .wrapper {
+    width: 200px;
+  }
+
+  .img-wrapper {
+    height: 200px;
+  }
+
+  .active-wrapper {
+    width: 280px;
+  }
+
+  .active-img-wrapper {
+    height: 280px !important;
+  }
+}

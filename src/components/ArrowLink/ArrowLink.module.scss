@@ -1,0 +1,12 @@
+@import "../../styles/mixins/textStyle.mixin";
+
+.ArrowLink {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  @include textStyle(white, 1.8rem);
+  letter-spacing: 0.11rem;
+  line-height: 2.1rem;
+
+  cursor: pointer;
+}

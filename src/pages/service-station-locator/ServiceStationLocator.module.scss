@@ -1,0 +1,251 @@
+@import "../../styles/variables/colors";
+@import "../../styles/mixins/textStyle.mixin";
+
+:global .map-filter-enter {
+  margin-left: -1000px;
+}
+:global .map-filter-enter-active {
+  margin-left: 0;
+  transition: margin 300ms;
+}
+:global .map-filter-exit {
+  margin-left: 0;
+}
+:global .map-filter-exit-active {
+  margin-left: -1000px;
+  transition: margin 300ms;
+}
+
+.service-wrapper {
+  position: relative;
+}
+
+.foodMain {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 220px;
+  overflow: hidden;
+  overflow-y: scroll;
+
+  > div {
+    width: 50%;
+    margin-bottom: 2rem;
+  }
+}
+
+.warning {
+  @include textStyle(#fff, 1.6rem, 300, normal, normal);
+}
+
+.filters-wrapper {
+  max-width: 58.1rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.searchbox-wrapper {
+  height: 10rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchbox {
+  padding: 0 4%;
+  width: 100%;
+  position: relative;
+  input {
+    padding: 1rem 17rem 1rem 0;
+  }
+}
+
+.searchbox-icons {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+
+  > .search-icon {
+    cursor: pointer;
+    padding: 0.5rem;
+
+    &:first-child {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.form-wrapper {
+  max-width: 75rem;
+  height: 70rem;
+}
+
+.form {
+  padding: 4%;
+  background: $blue;
+  height: 100%;
+
+  > div:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+
+.map {
+  height: 80rem;
+}
+
+.btns-row {
+  display: flex;
+  justify-content: space-between;
+  button {
+    min-width: 21rem;
+  }
+}
+
+.title {
+  @include textStyle(#fff, 1.8rem, 400, normal, normal);
+  margin-bottom: 3rem;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  > div {
+    margin: 0;
+    margin-right: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+.types-wrapper {
+  justify-content: space-between;
+  .main {
+    div {
+      margin-right: 0 !important;
+    }
+  }
+}
+
+.fuel-type {
+  margin-right: 4rem;
+  .main {
+    flex-direction: column;
+  }
+}
+
+.food {
+  .main {
+    flex-direction: column;
+  }
+}
+
+.types-wrapper {
+  display: flex;
+  .main {
+    > div:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    margin-top: 10rem;
+    padding: 3.5rem 3rem;
+  }
+
+  .btns-row {
+    button {
+      margin-bottom: 2rem;
+      padding: 1rem 2rem;
+      min-width: 170px;
+    }
+  }
+
+  .types-wrapper {
+    .main {
+      flex-wrap: wrap;
+      > div:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .filters-wrapper {
+    max-width: initial;
+  }
+
+  .btns-row {
+    button {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .form {
+    > div:not(:last-child):not(:nth-last-child(1)) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .wrapper {
+    > div {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .station-type {
+    margin-bottom: 2rem;
+  }
+
+  .btns-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    margin-bottom: 2rem;
+  }
+
+  .types-wrapper {
+    .main {
+      flex-wrap: wrap;
+      > div:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  .searchbox {
+    input {
+      padding: 1rem 16rem 1rem 0;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .form {
+    > div:not(:last-child):not(:nth-last-child(1)) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .main > div {
+    margin-bottom: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .searchbox {
+    input {
+      padding: 1rem 14rem 1rem 0;
+    }
+  }
+}

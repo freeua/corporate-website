@@ -1,0 +1,22 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.columnedBlock {
+  width: 33.33%;
+
+  > div:last-child {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .columnedBlock {
+    width: 100%;
+  }
+}

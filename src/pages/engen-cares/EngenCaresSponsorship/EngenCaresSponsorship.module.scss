@@ -1,0 +1,46 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bodySections {
+  display: flex;
+  flex-direction: column;
+}
+
+.bodySectionsFlex {
+  display: flex;
+
+  div {
+    width: 50%;
+  }
+}
+
+.sectionsLeftText,
+.sectionsRightText {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  > * {
+    flex: 1;
+  }
+
+  div {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .bodySectionsFlex {
+    flex-direction: column;
+
+    div {
+      width: 100%;
+    }
+  }
+}

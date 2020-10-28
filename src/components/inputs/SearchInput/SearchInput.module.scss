@@ -1,0 +1,122 @@
+@import "../../../styles/variables/colors";
+@import "../../../styles/mixins/textStyle.mixin";
+
+.wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  @include textStyle($blue, 2.8rem, bold);
+  padding: 2rem 7rem 2rem 0;
+  opacity: 0.8;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 2px solid $blue;
+  outline: 0;
+  background-color: transparent;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: $blue;
+  }
+
+  &:focus {
+    opacity: 1;
+  }
+
+  &.white {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    opacity: 1;
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+}
+
+.input-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+}
+
+.clear {
+  position: absolute;
+  top: 50%;
+  right: 5rem;
+  transform: translateY(-50%);
+  border: 0;
+  color: $blue;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .input {
+    padding: 2rem 6rem 2rem 0;
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .input {
+    padding: 1rem 6rem 0 0;
+    font-size: 2rem;
+  }
+
+  .search {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .input-icon {
+    > svg {
+      margin-right: 1.5rem;
+    }
+  }
+
+  .input {
+    padding: 1rem 3rem 1rem 0;
+    font-size: 2rem;
+  }
+
+  .input-icon svg {
+    width: 2.5rem;
+    padding-bottom: 0.4rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .input {
+    font-size: 1.8rem;
+  }
+
+  .input-icon {
+    > svg {
+      margin-right: 0.5rem;
+    }
+    > div {
+      margin-right: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .input {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .input {
+    font-size: 1.5rem;
+  }
+}

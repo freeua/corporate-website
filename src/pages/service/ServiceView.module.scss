@@ -1,0 +1,29 @@
+@import "../../styles/mixins/textStyle.mixin";
+@import "../../styles/variables/colors";
+
+.sections {
+  min-height: 40rem;
+  padding: 10%;
+}
+
+.description {
+  @include textStyle($grey_text, 1.8rem);
+}
+
+.file {
+  margin: 3rem 0;
+}
+
+.one-file {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  span {
+    padding-left: 20px;
+    @include textStyle($grey_text, 1.8rem, 300, normal, normal);
+    flex: 1 1;
+  }
+  svg {
+    width: 40px;
+  }
+}

@@ -1,0 +1,117 @@
+@import "../../../styles/variables/colors";
+@import "../../../styles/mixins/textStyle.mixin";
+
+.wrapper {
+  background-color: $lightgray_background;
+  padding: 9.5rem 12.5rem;
+}
+
+.footer-navigation-block {
+  display: flex;
+}
+
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  > * {
+    width: 25%;
+  }
+}
+
+.contacts {
+  margin-left: 8%;
+  max-width: 335px;
+  width: 100%;
+}
+
+.details {
+  margin-bottom: 5rem;
+}
+
+.link-list {
+  margin-bottom: 6rem;
+  padding-right: 1rem;
+}
+
+.parent-link {
+  @include textStyle($blue, 2.4rem, 500);
+  margin-bottom: 2rem;
+}
+
+.child-link {
+  @include textStyle($blue, 1.2rem, 300);
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.detail-item {
+  margin-bottom: 2rem;
+}
+
+.detail-description {
+  @include textStyle($blue, 1.2rem, 400);
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.underline-link {
+  @include textStyle($blue, 1.2rem, 400);
+  text-decoration: underline;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.office-location-block {
+  margin-top: 6rem;
+}
+
+.office-location-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.copyright-link {
+  font-family: "Univers LT Std";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2.2;
+  letter-spacing: 1px;
+  color: $blue;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.copyright-text {
+  font-family: "Univers LT Std";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2.2;
+  letter-spacing: 1px;
+  color: $blue;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1300px) {
+  .link-list {
+    margin-right: 40px;
+  }
+
+  .contacts {
+    margin-left: 20px;
+  }
+
+  .wrapper {
+    padding: 50px;
+  }
+}

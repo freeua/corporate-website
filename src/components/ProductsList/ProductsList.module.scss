@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 25%;
+  padding: 1.5rem;
+
+  @media screen and (max-width: 1200px) {
+    width: 33.33%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 100%;
+  }
+}

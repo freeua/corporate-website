@@ -1,0 +1,160 @@
+@import "../../../styles/variables/colors";
+@import "../../../styles/mixins/textStyle.mixin";
+
+.wrapper {
+  height: 100vh;
+  min-height: 800px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  display: flex;
+  a {
+    display: block;
+  }
+  z-index: 999;
+}
+
+.nav-left {
+  &:hover > .title {
+    opacity: 0.7;
+  }
+}
+
+.title {
+  cursor: pointer;
+  transition: 0.4s ease;
+  margin-bottom: 4.5rem;
+  line-height: 3.5rem;
+  color: $blue !important;
+
+  i {
+    opacity: 0;
+  }
+
+  &:hover {
+    opacity: 1 !important;
+
+    i {
+      opacity: 1;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.navigation-wrapper {
+  background-color: $darkgray_background;
+  display: flex;
+  flex: 1 1;
+  padding: 15rem 10%;
+  align-items: center;
+}
+
+.navigation-wrapper--inner {
+  display: flex;
+  width: 100%;
+}
+
+.nav-right {
+  flex: 0 0 50%;
+  max-width: 540px;
+  padding-left: 6rem;
+}
+
+.nav-text {
+  line-height: 1.36;
+  @include textStyle($grey_text, 1.8rem, 300, normal, normal);
+  opacity: 0.65;
+  margin: 3rem 0;
+}
+
+.nav-columns--wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-column {
+  max-height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  a {
+    display: flex;
+    @include textStyle($blue, 1.8rem, 400, normal, normal);
+  }
+}
+
+.quick-links-wrapper {
+  padding: 15rem 10rem 0 10rem;
+  background: $lightgray_background;
+}
+
+@media screen and (max-width: 1700px) {
+  .nav-column {
+    max-height: 280px;
+  }
+
+  .title {
+    font-size: 2.3rem;
+    margin-bottom: 2.3rem;
+  }
+
+  .navigation-wrapper {
+    justify-content: flex-start;
+    padding: 7%;
+  }
+
+  .nav-columns--wrapper {
+    a {
+      font-size: 1.5rem;
+    }
+  }
+
+  .nav-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .nav-right {
+    max-width: 350px;
+  }
+
+  .quick-links-wrapper {
+    padding: 15rem 7rem 0 7rem;
+    background: $lightgray_background;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-right {
+    max-width: 300px;
+  }
+}
+
+.link-wrapper {
+  margin-bottom: 2.8rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+
+  i {
+    opacity: 0;
+  }
+
+  &:hover i {
+    opacity: 1;
+  }
+
+  &:nth-child(6n) {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,179 @@
+@import "./mixins/font.mixin";
+
+@include font-face("Univers LT Std", "../../static/fonts/UniversLTStd-XBlack", otf, 950);
+
+@include font-face(
+  "Univers LT Std",
+  "../../static/fonts/UniversLTStd-XBlackEx",
+  otf,
+  950,
+  normal,
+  expanded
+);
+
+@include font-face(
+  "Univers LT Std",
+  "../../static/fonts/UniversLTStd-XBlackExObl",
+  otf,
+  950,
+  oblique,
+  expanded
+);
+
+@include font-face("Univers LT Std", "../../static/fonts/UniversLTStd-Black", otf, 900);
+
+@include font-face("Univers LT Std", "../../static/fonts/UniversLTStd-BlackObl", otf, 900, oblique);
+
+@include font-face(
+  "Univers LT Std",
+  "../../static/fonts/UniversLTStd-BlackEx",
+  otf,
+  900,
+  normal,
+  expanded
+);
+
+@include font-face(
+  "Univers LT Std",
+  "../../static/fonts/UniversLTStd-BlackExObl",
+  otf,
+  900,
+  oblique,
+  expanded
+);
+
+@include font-face("Univers LT Std", "../../static/fonts/UniversLTStd-Bold", otf, 700);
+
+@include font-face(
+  "Univers LT Std",
+  "../../static/fonts/UniversLTStd-BoldCn",
+  otf,
+  700,
+  normal,
+  condensed
+);
+
+@include font-face(
+  "Univers LT Std",
+  "../../static/fonts/UniversLTStd-BoldCnObl",
+  otf,
+  700,
+  oblique,
+  condensed
+);
+
+@include font-face(
+  "Univers LT Std",
+  "../../static/fonts/UniversLTStd-BoldEx",
+  otf,
+  700,
+  normal,
+  expanded
+);
+
+@include font-face(
+  "Univers LT Std",
+  "../../static/fonts/UniversLTStd-BoldExObl",
+  otf,
+  700,
+  oblique,
+  expanded
+);
+
+@include font-face("Univers LT Std", "../../static/fonts/UniversLTStd-BoldObl", otf, 700, oblique);
+
+@include font-face("Univers LT Std", "../../static/fonts/UniversLTStd", otf, 400);
+
+@include font-face(
+  "Univers LT Std",
+  "../../static/fonts/UniversLTStd-Cn",
+  otf,
+  400,
+  normal,
+  condensed
+);
+
+@include font-face(
+  "Univers LT Std",
+  "../../static/fonts/UniversLTStd-CnObl",
+  otf,
+  400,
+  oblique,
+  condensed
+);
+
+@include font-face(
+  "Univers LT Std",
+  "../../static/fonts/UniversLTStd-Ex",
+  otf,
+  400,
+  normal,
+  expanded
+);
+
+@include font-face(
+  "Univers LT Std",
+  "../../static/fonts/UniversLTStd-UltraCn",
+  otf,
+  400,
+  normal,
+  ultra-condensed
+);
+
+@include font-face("Univers LT Std", "../../static/fonts/UniversLTStd-Obl", otf, 400, oblique);
+
+@include font-face(
+  "Univers LT Std",
+  "../../static/fonts/UniversLTStd-ExObl",
+  otf,
+  400,
+  oblique,
+  expanded
+);
+
+@include font-face(
+  "Univers LT Std",
+  "../../static/fonts/UniversLTStd-Light",
+  otf,
+  300,
+  normal,
+  normal
+);
+
+@include font-face(
+  "Univers LT Std",
+  "../../static/fonts/UniversLTStd-LightCn",
+  otf,
+  300,
+  normal,
+  condensed
+);
+
+@include font-face(
+  "Univers LT Std",
+  "../../static/fonts/UniversLTStd-LightCnObl",
+  otf,
+  300,
+  oblique,
+  condensed
+);
+
+@include font-face("Univers LT Std", "../../static/fonts/UniversLTStd-LightObl", otf, 300, oblique);
+
+@include font-face(
+  "Univers LT Std",
+  "../../static/fonts/UniversLTStd-LightUltraCn",
+  otf,
+  300,
+  normal,
+  ultra-condensed
+);
+
+@include font-face(
+  "Univers LT Std",
+  "../../static/fonts/UniversLTStd-ThinUltraCn",
+  otf,
+  100,
+  normal,
+  ultra-condensed
+);

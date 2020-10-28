@@ -1,0 +1,54 @@
+@import "../../../../styles/variables/colors";
+
+.wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.error {
+  position: absolute;
+  padding: 0.5rem;
+  background-color: #fad7d7c7;
+  bottom: -30px;
+  color: red;
+  font-family: "Univers LT Std";
+  font-size: 1.2rem;
+}
+
+.input {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: "Univers LT Std";
+  font-weight: 300;
+  color: $grey;
+  padding: 5px 1px;
+  opacity: 0.4;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid $grey;
+  outline: 0;
+  background-color: transparent;
+  transition: 0.4s ease;
+
+  &:focus {
+    opacity: 1;
+  }
+
+  &.white {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    opacity: 1;
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .error {
+    padding: 0.2rem;
+    bottom: -21px;
+  }
+}

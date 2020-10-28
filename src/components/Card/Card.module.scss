@@ -1,0 +1,57 @@
+@import "../../styles/variables/colors";
+@import "../../styles/mixins/textStyle.mixin";
+
+.wrapper {
+  max-width: 63rem;
+  box-shadow: 2px 4px 15px 0 rgba(0, 0, 0, 0.16);
+}
+
+.title {
+  background: $darkgray_background;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 0;
+  @include textStyle($blue, 1.8rem, 700, normal, normal);
+}
+
+.link {
+  @include textStyle($blue, 1.8rem, 400, normal, normal);
+  letter-spacing: 1.1px;
+  a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.main {
+  padding: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 auto;
+
+  & > div > div:nth-child(1) {
+    margin-right: 15px;
+  }
+}
+
+.info-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 500px) {
+  .main {
+    padding: 3rem;
+  }
+
+  .container {
+    padding: 2rem 1.5rem;
+  }
+
+  .title {
+    padding: 2rem 0;
+  }
+}

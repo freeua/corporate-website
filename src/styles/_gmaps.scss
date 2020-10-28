@@ -1,0 +1,29 @@
+@import "./mixins/textStyle.mixin";
+
+.infoWrapper {
+  max-width: 280px;
+  width: 100%;
+}
+
+.sslInfoCompanyName {
+  @include textStyle($blue, 1.7rem, bold);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.info-field {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.field-title {
+  width: 60px;
+}
+
+.field-value a {
+  color: $blue !important;
+
+  &:hover {
+    text-decoration: underline !important;
+  }
+}

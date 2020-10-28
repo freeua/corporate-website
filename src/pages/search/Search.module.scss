@@ -1,0 +1,70 @@
+@import "../../styles/mixins/textStyle.mixin";
+@import "../../styles/variables/colors";
+
+.main {
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.search {
+  margin: 10rem auto;
+  max-width: 40rem;
+  width: 100%;
+}
+
+.results {
+  margin-bottom: 10rem;
+  .resultItem:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.error {
+  @include textStyle($grey_text, 2rem);
+  text-align: center;
+}
+
+.resultItem {
+  margin-bottom: 4rem;
+}
+
+.keyword {
+  @include textStyle($grey_text, 2rem);
+  text-decoration: underline !important;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  @include textStyle($lightgray_text, 2rem);
+}
+
+.pagination {
+  margin: 10rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginationPages {
+  @include textStyle($blue, 2rem);
+  letter-spacing: 1.1px;
+  margin: 0 6rem;
+}
+
+.arrow {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+  .search {
+    margin: 5rem auto;
+  }
+
+  .pagination {
+    margin: 5rem 0;
+  }
+}

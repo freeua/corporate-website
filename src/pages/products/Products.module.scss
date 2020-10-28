@@ -1,0 +1,62 @@
+@import "../../styles/variables/colors";
+@import "../../styles/mixins/textStyle.mixin";
+
+.title {
+  margin: 10rem 0 5rem;
+  @include textStyle($grey, 3.8rem, 700, normal, normal);
+}
+
+.products-section {
+  display: flex;
+}
+
+.productsWrapper {
+  width: 100%;
+  margin: 10rem 5rem;
+}
+
+.filters {
+  max-width: 400px;
+  min-width: 320px;
+  width: 100%;
+  display: flex;
+}
+
+.search {
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 7.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.load-more {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 33%;
+  padding: 1.5rem;
+
+  @media screen and (max-width: 1200px) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 100%;
+  }
+}

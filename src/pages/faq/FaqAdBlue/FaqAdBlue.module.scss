@@ -1,0 +1,11 @@
+@import "../../../styles/mixins/textStyle.mixin";
+@import "../../../styles/variables/colors";
+
+.tabContent {
+  max-width: 90rem;
+  width: 100%;
+  margin: auto;
+  margin-top: 10rem;
+  padding: 4% 6%;
+  @include textStyle($grey_text, 2rem, 500);
+}

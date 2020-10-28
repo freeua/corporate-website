@@ -1,0 +1,13 @@
+@import "../../styles/variables/colors";
+@import "../../styles/mixins/textStyle.mixin";
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1224px) {
+  .main {
+    flex-direction: column;
+  }
+}

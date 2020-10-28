@@ -1,0 +1,104 @@
+@import "../../../styles/variables/colors";
+@import "../../../styles/mixins/textStyle.mixin";
+
+.wrapper {
+  z-index: 3000;
+  position: fixed;
+  top: 16vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem 0;
+  border-radius: 48px;
+  box-shadow: 9px 5px 30px 0 rgba(0, 0, 0, 0.15);
+  background-color: $blue;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  padding: 0 7%;
+  box-sizing: border-box;
+}
+
+.input {
+  width: 100%;
+  @include textStyle(white);
+  padding: 10px 50px 10px 5px;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: white;
+  }
+
+  &:focus {
+    opacity: 1;
+    border-bottom: 1px solid #fff;
+  }
+
+  &.white {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    opacity: 1;
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+}
+
+.input-icon {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.clear {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  background-color: $blue;
+  transform: translateY(-50%);
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    padding: 2rem 0;
+  }
+
+  .input {
+    padding: 10px 35px 10px 25px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .wrapper {
+    max-width: calc(100% - 30px);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .input {
+    font-size: 1.4rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/*Height media*/
+@media only screen and (max-width: 500px) {
+  .wrapper {
+    top: 10rem;
+  }
+}

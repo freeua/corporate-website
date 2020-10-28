@@ -1,0 +1,133 @@
+@import "../../styles/mixins/textStyle.mixin";
+@import "../../styles/variables/colors";
+
+:global .justify-center {
+  .slick-track {
+    justify-content: center;
+  }
+}
+
+:global .news-center {
+  position: relative;
+  padding-bottom: 1rem;
+
+  .slick-prev {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    bottom: -21px;
+    left: calc(100vw / 2 + -8rem);
+    cursor: pointer;
+    transition: transform 200ms ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .slick-next {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    bottom: 0;
+    right: calc(100vw / 2 + -8rem);
+    bottom: -21px;
+    cursor: pointer;
+    transition: transform 200ms ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .slick-track {
+    align-items: center;
+    display: flex;
+    padding-bottom: 3rem;
+    margin-top: 4rem;
+    min-height: 615px;
+  }
+}
+
+:global .video-list {
+  position: relative;
+  padding-bottom: 1rem;
+
+  .slick-prev {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    bottom: -21px;
+    left: calc(100vw / 2 + -8rem);
+    cursor: pointer;
+    transition: transform 200ms ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .slick-next {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    bottom: 0;
+    right: calc(100vw / 2 + -8rem);
+    bottom: -21px;
+    cursor: pointer;
+    transition: transform 200ms ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .slick-track {
+    align-items: center;
+    display: flex;
+    padding-bottom: 3rem;
+    margin-top: 4rem;
+    min-height: 415px;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.pages {
+  text-align: center;
+  width: 100%;
+  @include textStyle($blue, 1.8rem);
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  .pages {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  :global .news-center {
+    .slick-track {
+      align-items: center;
+      display: flex;
+      padding-bottom: 3rem;
+      min-height: 477px;
+    }
+  }
+}

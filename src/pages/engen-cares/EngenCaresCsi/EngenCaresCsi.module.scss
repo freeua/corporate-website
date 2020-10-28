@@ -1,0 +1,75 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sectionImage {
+  height: 100%;
+  > div {
+    height: 100%;
+  }
+}
+
+.bodySections {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.bodySectionsFlex {
+  display: flex;
+}
+
+.sectionsRight {
+  width: 66.66%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionsRightHealth {
+  display: flex;
+  height: 100%;
+}
+
+.sectionsLeftText {
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    flex: 1;
+  }
+}
+
+.sectionsLeftText {
+  width: 50%;
+}
+
+.columnedBlock {
+  width: 33.33%;
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .columnedBlock {
+    width: 100%;
+  }
+
+  .sectionsRightHealth {
+    flex-direction: column;
+  }
+
+  .bodySectionsFlex {
+    flex-direction: column;
+  }
+
+  .sectionsRight {
+    width: 100%;
+  }
+  .sectionsLeftText {
+    flex-direction: column;
+    width: 100%;
+  }
+}

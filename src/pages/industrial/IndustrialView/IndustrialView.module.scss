@@ -1,0 +1,149 @@
+@import "../../../styles/mixins/textStyle.mixin";
+@import "../../../styles/variables/colors";
+@import "../../../styles/mixins/objectFit.mixin.scss";
+
+.sections {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section {
+  flex-basis: 50%;
+  width: 50%;
+  padding: 6% 7%;
+  line-height: 2.8rem;
+}
+
+.section-title {
+  @include textStyle($grey, 3rem, 700, normal, normal);
+  margin-bottom: 3.5rem;
+  margin-top: 0;
+}
+
+.section-description {
+  padding-top: 2rem;
+  @include textStyle($grey, 1.8rem, normal, normal, normal);
+}
+
+.section-image {
+  @include object-fit(cover);
+  flex-basis: 50%;
+  max-height: 50rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mobile-section {
+  flex-basis: 100%;
+  width: 100%;
+  line-height: 2.8rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid $blue;
+  cursor: pointer;
+}
+
+.mobile-image {
+  flex-basis: 100%;
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $blue;
+  flex-direction: column;
+  cursor: pointer;
+
+  &:first-child {
+    border-top: 1px solid $blue;
+  }
+}
+
+.expanded {
+  font-size: 1.8rem;
+  color: $blue;
+  margin-left: auto;
+  font-family: "Univers LT Std";
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1024px) {
+  .section {
+    flex-basis: 100%;
+    width: 100%;
+    padding: 6% 7%;
+    line-height: 2.8rem;
+  }
+
+  .products {
+    margin-top: 4rem !important;
+  }
+
+  .section-image {
+    @include object-fit(cover);
+    flex-basis: 100%;
+    max-height: 50rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@media screen and (max-width: 678px) {
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10rem;
+}
+
+.productWrapper {
+  width: 33.33%;
+  padding: 1.5rem;
+
+  > div {
+    height: 100%;
+  }
+}
+
+.productDescription {
+  @include textStyle($grey, 2rem, 400);
+}
+
+.viewAll {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 10rem 0;
+
+  > a {
+    color: white;
+  }
+}
+
+.mobileProduct {
+  width: 100%;
+  margin: 0 2rem;
+  border-bottom: 1px solid $blue;
+}
+
+.products {
+  .mobileProduct:first-child {
+    border-top: 1px solid $blue;
+  }
+}
+
+.mobileProductDescription {
+  @include textStyle($grey, 1.6rem, 300);
+}

@@ -1,0 +1,245 @@
+@import "../../styles/variables/colors";
+
+:global .navigation-enter {
+  margin-top: -1000px;
+}
+:global .navigation-enter-active {
+  margin-top: 0;
+  transition: margin 300ms;
+}
+:global .navigation-exit {
+  margin-top: 0;
+}
+:global .navigation-exit-active {
+  margin-top: -1000px;
+  transition: margin 300ms;
+}
+
+.wrapper {
+  background-color: $opacityBlue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 3px 2px 7px 0 rgba(0, 0, 0, 0.18);
+  display: flex;
+
+  &.cookie-accepted {
+    top: 42px;
+  }
+}
+
+.close {
+  font-size: 3rem;
+  color: white;
+}
+
+.search-block {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 0 1rem 0 3rem;
+}
+
+.logo-block {
+  width: 14rem;
+  background-color: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 11rem;
+  cursor: pointer;
+
+  svg {
+    width: 120px;
+  }
+}
+
+.action-block {
+  display: flex;
+  width: auto;
+  height: 11rem;
+}
+
+.petronas-background {
+  width: 18rem;
+  background-color: white;
+  background-image: url("../../static/images/PETRONAS-member.jpg");
+  background-repeat: no-repeat;
+  background-size: 13.2rem 4.7rem;
+  height: 100%;
+  background-position: center;
+}
+
+.action-item {
+  width: 11rem;
+  background-color: $menu_cyan;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  padding: 15px 0px;
+  &:hover {
+    background-color: #17cec8;
+  }
+
+  &:last-child {
+    &:hover {
+      .burger::after {
+        content: "";
+        right: 8px;
+      }
+    }
+  }
+
+  &:nth-last-child(2) {
+    svg {
+      transition: 0.3s ease;
+    }
+  }
+}
+
+.burger {
+  position: relative;
+  height: 15.5px;
+  width: 3rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 0.25rem;
+    width: 2rem;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    border-radius: 1px;
+    transition: 0.3s ease;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 0.25rem;
+    width: 2.9rem;
+    top: 0;
+    right: 0;
+    background-color: white;
+    border-radius: 1px;
+  }
+}
+
+.search-block-mobile {
+  position: absolute;
+  padding: 1.5rem;
+  margin-top: 8rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+
+  > div {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-block-mobile {
+    margin-top: 9rem;
+
+    &.cookie-accepted {
+      margin-top: 13rem;
+    }
+  }
+
+  .wrapper {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .logo-block {
+    height: 8.5rem;
+  }
+
+  .action-block {
+    height: 8.5rem;
+  }
+
+  .search-block {
+    padding: 1rem;
+    order: 3;
+    display: none;
+  }
+
+  .petronas-background {
+    width: initial;
+  }
+
+  .linkActionBlock {
+    width: 100%;
+  }
+
+  .right {
+    width: calc(100% - 14rem);
+  }
+
+  .action-item {
+    min-width: 12.5rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .action-block {
+    height: 5.5rem;
+  }
+
+  .search-block-mobile {
+    position: absolute;
+    padding: 1.5rem;
+    margin-top: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &.cookie-accepted {
+      margin-top: 10rem;
+    }
+
+    &.backButton {
+      margin-top: 8rem;
+    }
+
+    &.backButton.cookie-accepted {
+      margin-top: 12rem;
+    }
+  }
+
+  .logo-block {
+    box-shadow: -3px 3px 15px 0 rgba(0, 0, 0, 0.1);
+    height: 5.5rem;
+    width: 8rem;
+    svg {
+      width: 4.5rem;
+    }
+  }
+
+  .action-item {
+    min-width: 8.5rem;
+
+    &:hover {
+      background-color: $menu_cyan;
+    }
+  }
+
+  .right {
+    width: calc(100% - 8rem);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .petronas-background {
+    background-size: contain;
+  }
+}

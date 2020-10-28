@@ -1,0 +1,44 @@
+@import "../../../styles/variables/colors";
+
+.error {
+  color: red;
+  font-family: "Univers LT Std";
+  font-size: 1rem;
+}
+
+.wrapper {
+  width: 100%;
+  font-family: "Univers LT Std";
+  > div > div > div {
+    padding: 0;
+    font-weight: 100;
+  }
+}
+
+.input {
+  font-family: "Univers LT Std" !important;
+  font-weight: 100;
+  color: $grey;
+  padding: 5px 1px;
+  opacity: 0.4;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid $grey;
+  outline: 0;
+  background-color: transparent;
+
+  &:focus {
+    opacity: 1;
+  }
+
+  &.white {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    opacity: 1;
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+}

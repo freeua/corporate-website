@@ -1,0 +1,149 @@
+@import "../../../styles/variables/colors";
+@import "../../../styles/mixins/textStyle.mixin";
+@import "../../../styles/mixins/objectFit.mixin.scss";
+
+h2 {
+  margin: 0;
+  @include textStyle($grey_text, 3.8rem, 700, normal, normal);
+  line-height: 5rem;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-text {
+  color: $grey_text;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.share {
+  // background-image: url("../../../static/images/share.png");
+  min-width: 26px;
+  min-height: 29px;
+  transition: 0.4s ease;
+  background-repeat: no-repeat;
+  margin-left: 30px;
+}
+
+.text {
+  @include textStyle($grey_text, 1.8rem, 300, normal, normal);
+  width: 50%;
+  padding: 8rem 12.5rem;
+  line-height: 3rem;
+  box-sizing: border-box;
+}
+
+.date {
+  opacity: 0.65;
+  margin: 4rem 0;
+}
+
+.text-main {
+  img {
+    @include object-fit(contain);
+    object-fit: contain;
+    width: 100%;
+  }
+
+  p {
+    margin-bottom: 3rem;
+  }
+}
+
+.media {
+  width: 50%;
+}
+
+.img {
+  width: 100%;
+
+  > img {
+    width: 100%;
+  }
+}
+
+.carousel-section {
+  width: 100%;
+  padding: 10rem 0;
+  background-color: $darkgray_background;
+}
+
+.carousel-title {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 7rem;
+}
+
+.one-file {
+  padding-right: 3rem;
+}
+
+.one-file {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  cursor: pointer;
+  span {
+    padding-left: 30px;
+    @include textStyle($grey_text, 1.8rem, 300, normal, normal);
+    flex: 1 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  svg {
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .text {
+    padding: 5rem 7rem;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .text {
+    padding: 3rem 4rem;
+  }
+
+  h2 {
+    margin: 0;
+    @include textStyle($grey_text, 2.8rem, 700, normal, normal);
+    line-height: 3.5rem;
+  }
+
+  .date {
+    margin: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .info {
+    flex-direction: column;
+  }
+
+  .media {
+    width: 100%;
+  }
+
+  .text {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .text {
+    padding: 2rem 2rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}

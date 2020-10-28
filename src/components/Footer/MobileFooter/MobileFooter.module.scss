@@ -1,0 +1,29 @@
+@import "../../../styles/variables/colors";
+@import "../../../styles/mixins/textStyle.mixin";
+
+.wrapper {
+  background-color: $lightgray_background;
+  padding: 12% 10%;
+}
+
+.socials {
+  margin: 2.5rem 0;
+  max-width: 240px;
+  width: 100%;
+}
+
+.copyright-link {
+  @include textStyle($blue, 13px, 400);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.copyright-text {
+  @include textStyle($blue, 13px, 400);
+  line-height: 20px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}

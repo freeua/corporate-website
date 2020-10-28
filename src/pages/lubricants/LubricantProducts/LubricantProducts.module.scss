@@ -1,0 +1,162 @@
+@import "../../../styles/variables/colors";
+@import "../../../styles/mixins/textStyle.mixin";
+
+.main {
+  width: 100%;
+}
+
+.container {
+  padding: 0 7%;
+}
+
+.searchWrapper {
+  margin: 10rem 0;
+  display: flex;
+  justify-content: center;
+  padding: 0 1.5rem;
+}
+
+.searchProduct {
+  max-width: 400px;
+  width: 100%;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10rem;
+  margin-top: 5rem;
+}
+
+.recommender {
+  padding: 0rem 15%;
+  background-color: $blue;
+  position: relative;
+  margin-top: 10rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 180px;
+  height: 100%;
+}
+
+.imageContainer {
+  position: relative;
+  bottom: -4rem;
+  width: 13rem;
+}
+
+.recommendImg {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.recommendDescription {
+  .descriptionTitle {
+    letter-spacing: 1.1px;
+    @include textStyle(white, 1.4rem);
+    margin-bottom: 1rem;
+  }
+
+  .descriptionSubTitle {
+    @include textStyle(white, 2.2rem, bold);
+    background: none;
+    padding: 0;
+  }
+}
+
+.load-more {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.tagsMobile {
+  margin-top: 5rem;
+}
+
+.tagWrapper {
+  margin-bottom: 3rem;
+}
+
+.productsWrapper {
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tagTitleWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tagTitle {
+  @include textStyle($blue, 1.8rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  margin-right: 1rem;
+}
+
+.sections {
+  display: flex;
+}
+
+@media screen and (max-width: 1224px) {
+  .sections {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .imageContainer {
+    width: 10rem;
+  }
+
+  .recommendDescription {
+    font-size: 2rem;
+
+    .descriptionSubTitle {
+      @include textStyle(white, 1.6rem, bold);
+    }
+
+    .descriptionTitle {
+      @include textStyle(white, 1.1rem);
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .recommender {
+    padding: 5rem 15%;
+    flex-direction: column;
+  }
+
+  .imageContainer {
+    bottom: 0;
+    margin-bottom: 3rem;
+    width: 11rem;
+  }
+
+  .recommendDescription {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    font-size: 2.3rem;
+    letter-spacing: 1.2px;
+
+    .descriptionSubTitle {
+      line-height: 3rem;
+      @include textStyle(white, 2rem, bold);
+    }
+
+    .descriptionTitle {
+      line-height: 2.5rem;
+      @include textStyle(white, 1.2rem);
+    }
+  }
+}

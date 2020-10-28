@@ -1,0 +1,124 @@
+@import "../../styles/variables/colors";
+@import "../../styles/mixins/textStyle.mixin";
+@import "../../styles/mixins/objectFit.mixin.scss";
+
+.container {
+  padding: 0 1.5rem;
+}
+
+.wrapper {
+  width: 326px;
+  box-shadow: 18px 18px 15px -8px #ededed;
+  transition: all 500ms ease;
+  cursor: pointer;
+  .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.active {
+  &-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+    width: 400px;
+  }
+  &-img-wrapper {
+    width: 100%;
+    height: 350px !important;
+    position: relative;
+    display: block;
+
+    &.img-wrapper::after {
+      content: none;
+    }
+
+    img {
+      @include object-fit(cover);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+.info {
+  background: #fff;
+  padding: 10%;
+}
+
+.read {
+  @include textStyle($blue, 1.8rem, 300, normal, normal);
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-right: 1.5rem;
+  }
+}
+
+.img-wrapper {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  transition: all 300ms ease;
+
+  img {
+    @include object-fit(cover);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 44, 144, 0.4);
+    position: absolute;
+  }
+}
+
+.date {
+  @include textStyle($grey, 1.5rem, 300, normal, normal);
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+
+.title {
+  @include textStyle($grey, 1.5rem, 300, normal, normal);
+  margin-bottom: 35px;
+  // white-space: nowrap;
+  overflow: hidden;
+  // text-overflow: ellipsis;
+  line-height: 2.4rem;
+}
+
+@media screen and (max-width: 550px) {
+  .active {
+    &-img-wrapper {
+      height: 250px !important;
+    }
+  }
+
+  .img-wrapper {
+    height: 150px;
+  }
+
+  .wrapper {
+    width: 200px;
+  }
+
+  .active-wrapper {
+    width: 280px;
+  }
+}

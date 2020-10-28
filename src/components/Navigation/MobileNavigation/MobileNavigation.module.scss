@@ -1,0 +1,30 @@
+@import "../../../styles/variables/colors";
+@import "../../../styles/mixins/textStyle.mixin";
+
+.wrapper {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 17rem 3rem 8rem 3rem;
+  background: $lightgray_background;
+  z-index: 999;
+}
+
+.mob-nav-socials {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    padding: 14rem 5rem 5rem 3rem;
+  }
+}
+
+.title {
+  font-size: 30px;
+}

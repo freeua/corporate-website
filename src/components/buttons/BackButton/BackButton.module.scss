@@ -1,0 +1,44 @@
+@import "../../../styles/variables/colors";
+
+.wrapper {
+  position: fixed;
+  top: 15.2rem;
+  z-index: 2;
+
+  &.cookieAccepted {
+    top: 11rem;
+  }
+}
+
+.back > button {
+  position: static;
+  width: 10rem;
+  height: 10rem;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    top: 12.7rem;
+
+    &.cookieAccepted {
+      top: 8.5rem;
+    }
+  }
+  .back > button {
+    height: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .back > button {
+    width: 8rem;
+  }
+
+  .wrapper {
+    top: 9.5rem;
+
+    &.cookieAccepted {
+      top: 5.5rem;
+    }
+  }
+}

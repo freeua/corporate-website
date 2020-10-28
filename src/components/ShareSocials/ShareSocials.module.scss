@@ -1,0 +1,43 @@
+@import "../../styles/variables/colors";
+
+.wrapper {
+  position: relative;
+}
+
+.icon {
+  opacity: 0.6;
+  transition: opacity 300ms ease;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.share-item {
+  margin-right: 1.5rem;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.socials {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .socials {
+    flex-direction: column;
+  }
+
+  .share-item {
+    margin-bottom: 1.5rem;
+    margin-right: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

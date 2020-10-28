@@ -1,0 +1,12 @@
+@import "../../../styles/variables/colors";
+@import "../../../styles/mixins/textStyle.mixin";
+
+.main {
+  display: flex;
+}
+
+@media screen and (max-width: 1224px) {
+  .main {
+    flex-direction: column;
+  }
+}

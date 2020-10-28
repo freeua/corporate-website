@@ -1,0 +1,17 @@
+@import "../../styles/mixins/textStyle.mixin";
+
+.wrapper {
+  width: 100%;
+}
+
+.nav {
+  @include textStyle($blue, 1.8rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.main {
+  padding: 0 3rem 3rem 3rem;
+}

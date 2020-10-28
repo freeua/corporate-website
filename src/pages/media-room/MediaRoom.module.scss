@@ -1,0 +1,167 @@
+.wrapper {
+  h2 {
+    margin-bottom: 0;
+    line-height: 3.8rem;
+    @media screen and (max-width: 1024px) {
+      font-size: 3.4rem;
+      line-height: 3.8rem;
+    }
+  }
+}
+
+.facebookFeed {
+  width: 100%;
+  margin: 7rem 0;
+}
+
+.sections {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10rem;
+}
+
+.insta-card-wrapper {
+  padding: 0 1.5rem;
+}
+
+.media-contacts {
+  background-color: #002c90;
+  padding: 7% 6%;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+.media-contacts-title {
+  color: #ffffff;
+  font-size: 3.8rem;
+  font-weight: bold;
+  width: 25%;
+  font-family: "Univers LT Std";
+  margin-bottom: 0;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    font-size: 3.4rem;
+    line-height: 3.8rem;
+  }
+}
+
+.media-contacts-item {
+  padding-top: 16rem;
+  width: 30%;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    padding-top: 4rem;
+  }
+
+  &:nth-child(2) {
+    margin-right: 3rem;
+  }
+
+  p:last-child {
+    padding-top: 3.5rem;
+
+    @media screen and (max-width: 1024px) {
+      padding-top: 1rem;
+    }
+  }
+}
+
+.media-contacts-item-block {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.2rem;
+  line-height: 1.27;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: "Univers LT Std";
+
+  .media-contacts-item-subtitle {
+    font-weight: normal;
+    font-size: 2.2rem;
+    line-height: 1.27;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.media-contacts-item-block {
+  font-size: 2.2rem;
+  line-height: 1.27;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.media-contacts-item-contact {
+  opacity: 0.65;
+  font-weight: 300;
+  line-height: 1.27;
+}
+
+.carousel-title {
+  font-size: 3.8rem;
+  font-weight: bold;
+  color: #002c90;
+  padding: 4rem 0;
+  font-family: "Univers LT Std";
+  margin: 0 auto;
+  width: fit-content;
+
+  @media screen and (max-width: 1024px) {
+    padding: 5rem 2rem;
+    font-size: 3.4rem;
+    line-height: 3.8rem;
+  }
+
+  &.socials {
+    @media screen and (max-width: 1024px) {
+      width: fit-content;
+      margin: 0 auto;
+    }
+  }
+}
+
+.button-centered {
+  padding-top: 2rem;
+  padding-bottom: 7rem;
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 1024px) {
+    svg {
+      width: 25px;
+    }
+  }
+}
+
+.social-media-feed {
+  background-color: #e7e9ea;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.social-media-feed-instagram {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  margin: 0 auto;
+  overflow-x: auto;
+  overflow: hidden;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+  > div {
+    margin: 0 20px;
+  }
+}

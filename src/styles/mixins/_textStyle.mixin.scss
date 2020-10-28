@@ -1,0 +1,10 @@
+@import "../variables/colors";
+
+@mixin textStyle($color: $blue, $size: 1.8rem, $weight: normal, $stretch: normal, $style: normal) {
+  font-size: $size;
+  font-family: "Univers LT Std";
+  font-weight: $weight;
+  font-stretch: normal;
+  font-style: normal;
+  color: $color;
+}

@@ -1,0 +1,81 @@
+@import "../../styles/variables/colors";
+@import "../../styles/mixins/textStyle.mixin";
+
+.wrapper {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4.4rem;
+  background-color: white;
+  z-index: 2000;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+  padding: 0 2rem;
+  button {
+    padding: 0.6rem 3rem !important;
+  }
+}
+
+.block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.text-warning {
+  @include textStyle($blue, 1.5rem);
+  margin-right: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  button {
+    &:first-child {
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .wrapper {
+    padding: 0 1rem;
+
+    button {
+      font-size: 1.2rem;
+      padding: 0.6rem 2rem !important;
+    }
+  }
+
+  .text-warning {
+    @include textStyle($blue, 1.2rem);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .wrapper {
+    padding: 0 0.5rem;
+
+    button {
+      font-size: 1.2rem;
+      padding: 0.6rem 1rem !important;
+      &:first-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .text-warning {
+    @include textStyle($blue, 1.2rem);
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .text-warning {
+    @include textStyle($blue, 1.1rem);
+    margin-right: 0.7rem;
+  }
+}

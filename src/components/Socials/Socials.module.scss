@@ -1,0 +1,73 @@
+@import "../../styles/variables/colors";
+
+.wrapper {
+  width: 100%;
+  max-width: 30rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.facebook {
+  svg {
+    fill: $blue;
+    transition: all 0.2s;
+
+    &:hover {
+      fill: #3b5998;
+    }
+  }
+}
+
+.twitter {
+  svg {
+    fill: $blue;
+    transition: all 0.2s;
+
+    &:hover {
+      fill: #1da1f2;
+    }
+  }
+}
+
+.linkedin {
+  svg {
+    fill: $blue;
+    transition: all 0.2s;
+
+    &:hover {
+      fill: #2867b2;
+    }
+  }
+}
+
+.instagram {
+  svg {
+    fill: $blue;
+    transition: all 0.2s;
+
+    &:hover {
+      fill: $gradient;
+    }
+  }
+}
+
+.youtube {
+  svg {
+    fill: $blue;
+
+    path {
+      transition: all 0.2s;
+    }
+
+    &:hover path {
+      fill: #ff0000;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    max-width: 170px;
+    margin-bottom: 40px;
+  }
+}

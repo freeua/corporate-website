@@ -1,0 +1,35 @@
+.fullscreen-carousel {
+  position: relative;
+
+  iframe {
+    width: 100vw;
+    height: calc(80vw / 1.77777778);
+  }
+}
+
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1024px) {
+  .fullscreen-carousel {
+    position: relative;
+
+    iframe {
+      width: 100vw;
+      height: calc(100vw / 1.77777778);
+    }
+  }
+  .slick-slider {
+    margin-top: 5rem;
+  }
+}
+
+@-moz-document url-prefix() {
+  .fullscreen-carousel {
+    margin-bottom: 7rem;
+  }
+}

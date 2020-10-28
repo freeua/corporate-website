@@ -1,0 +1,75 @@
+@import "../../../styles/variables/colors";
+
+.button {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $opacityBlue;
+  transition: all 0.25s ease;
+  border: unset;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 3;
+
+  &:disabled {
+    background-color: $grey;
+
+    &:hover {
+      background-color: $grey;
+
+      .arrow {
+        border: solid $grey;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: white;
+  }
+
+  &:hover .arrow {
+    border: solid $blue;
+    border-width: 0 2px 2px 0;
+  }
+
+  &:first-child {
+    right: 10rem;
+  }
+
+  &.white {
+    background-color: #fff;
+    box-shadow: 1px 7px 10px rgba(0, 0, 0, 0.1);
+    i {
+      border: solid $blue;
+      border-width: 0 2px 2px 0;
+    }
+  }
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transition: all 0.25s ease;
+
+  &.right {
+    transform: rotate(-45deg);
+  }
+
+  &.left {
+    transform: rotate(135deg);
+  }
+
+  &.up {
+    transform: rotate(-135deg);
+  }
+
+  &.down {
+    transform: rotate(45deg);
+  }
+}

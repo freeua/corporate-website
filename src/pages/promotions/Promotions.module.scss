@@ -1,0 +1,41 @@
+.search {
+  max-width: 62rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 90px 1.5rem 20px;
+  box-sizing: border-box;
+}
+
+.promotions {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.promotion-wrapper {
+  width: 33.33%;
+  margin: 50px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .promotions {
+    width: 100%;
+  }
+
+  .promotion-wrapper {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .promotion-wrapper {
+    width: 100%;
+  }
+
+  .promotions {
+    margin-top: 40px;
+  }
+}
